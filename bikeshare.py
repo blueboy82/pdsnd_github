@@ -199,7 +199,7 @@ def raw_data(df):
     while raw_data_select == 'yes':
         if count_raw < len(df.index):
             print(df[count_raw - 5:count_raw])
-            raw_data_select=input('Would you like to see the next five rows of data? Enter yes or no.').lower()
+            raw_data_select=input('Enter yes if you would like to see the next five rows of data, otherwise enter no.').lower()
             count_raw += 5
         else:
             print(df[count_raw - 5:])
