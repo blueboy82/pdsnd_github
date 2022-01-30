@@ -93,7 +93,7 @@ def load_data(city, month, day):
     return df
 
 
-def time_stats(df, month, day):
+def time_stats(df, month, day, city):
     """Displays statistics on the most frequent times of travel."""
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
@@ -104,12 +104,12 @@ def time_stats(df, month, day):
         df['month'] = df['Start Time'].dt.month
         month_names = ['January', 'February', 'March', 'April', 'May', 'June']
         popular_month = month_names[df['month'].mode()[0] - 1]
-        print('The most popular month for rides was {}.'.format(popular_month))
+        print('The most popular month for rides in {} was {}.'.format(city, popular_month))
     """The most popular day of the week only prints a value if all days are chosen"""
     if day == 'all':
         df['day'] = df['Start Time'].dt.weekday_name
         popular_day = df['day'].mode()[0]
-        print('The most popular day of the week for rides was {}.'.format(popular_day))
+        print('The most popular day of the week for rides in {} was {}.'.format(city, popular_day))
     """The most popular start hour is found and converted to the corresponding time frame this translates to."""
     df['hour'] = df['Start Time'].dt.hour
     popular_hour = df['hour'].mode()[0]
@@ -218,7 +218,7 @@ def main():
         df = load_data(city, month, day)
 
         total_rides(df, city)
-        time_stats(df, month, day)
+        time_stats(df, month, day, city)
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df, city)
