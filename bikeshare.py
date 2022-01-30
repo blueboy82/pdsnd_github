@@ -99,13 +99,13 @@ def time_stats(df, month, day):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
     df['Start Time'] = pd.to_datetime(df['Start Time'])
-    """The most popular month only prints a value if all months are chosen"""
+    """The most popular month only prints a value when 'all' months is chosen"""
     if month == 'all':
         df['month'] = df['Start Time'].dt.month
         month_names = ['January', 'February', 'March', 'April', 'May', 'June']
         popular_month = month_names[df['month'].mode()[0] - 1]
         print('The most popular month for rides was {}.'.format(popular_month))
-    """The most popular day of the week only prints a value if all days are chosen"""
+    """The most popular day of the week only prints a value when 'all' days is chosen"""
     if day == 'all':
         df['day'] = df['Start Time'].dt.weekday_name
         popular_day = df['day'].mode()[0]
