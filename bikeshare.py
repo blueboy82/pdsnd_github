@@ -17,9 +17,9 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
-    """Users are asked to input the city they would like to see data for, the case is lowered in order to account for inconsistencies
-    in the use of capital letters. Should the city they enter not be recognised they will be asked to enter it again. After failing
-    to enter a recognised city four times the user is told that they have exceeded the maximum amount of attempts and the programme
+    """User inputs the city they would like to see data for, the case is lowered. Should the city they enter not be recognised they
+    will be asked to enter it again. After failing to enter a recognised city four times the user is told that they have exceeded
+    the maximum amount of attempts and the programme
     is closed using the exit() function from the system module. """
     count_city=0
     city = input('Please enter the city that you would like to view data for, you can choose from Chicago, New York City and Washington:')
