@@ -203,7 +203,7 @@ def raw_data(df):
             count_raw += 5
         else:
             print(df[count_raw - 5:])
-            print('This is the end of the raw data.')
+            print('This is the end of the raw data. Thank you for using bikeshare.')
             break
 
 def total_rides(df, city):
