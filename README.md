@@ -10,7 +10,9 @@ Bikeshare
 The program allows users to view a summary of statistics of bikeshare usage across three different cities. Data can be filtered by month and/or day of the week.
 
 ### Files used
-Include the files used
+chicago.csv
+new_york_city.csv
+washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Udacity
