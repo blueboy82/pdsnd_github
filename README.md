@@ -7,7 +7,7 @@
 Bikeshare
 
 ### Description
-Describe what your project is about and what it does
+The program allows users to view a summary of statistics of bikeshare usage across three different cities. Data can be filtered by month and/or day of the week.
 
 ### Files used
 Include the files used
